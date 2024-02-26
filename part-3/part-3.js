@@ -17,6 +17,12 @@ let FLname = [
   { firstName: "ali", lastName: "moradi" },
   { firstName: "reza", lastName: "soltani" }
 ];
-let firstNames = FLname.map(({ firstName }) => firstName);
-let lastNames = FLname.map(({ lastName }) => lastName);
+// let firstNames = FLname.map(({ firstName }) => firstName);
+// let lastNames = FLname.map(({ lastName }) => lastName);
+let firstNames = [];
+let lastNames = [];
+FLname.forEach(person => {
+  firstNames.push(person.firstName);
+  lastNames.push(person.lastName);
+})
 console.log(firstNames, lastNames);
