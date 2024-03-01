@@ -13,10 +13,17 @@ console.log(newArray);
 newArray = [...newArray, 4];
 console.log(newArray);
 
+// distructuring
 let FLname = [
-  { firstName: "ali", lastName: "moradi" },
-  { firstName: "reza", lastName: "soltani" }
+  { firstName: "ali", lastName: "moradi", age: 22 },
+  { firstName: "reza", lastName: "soltani", age: 22 },
+  { firstName: "sara", lastName: "mohammadi", age: 22 },
+  { firstName: "mohammad", lastName: "azizi", age: 22 },
 ];
-let firstNames = FLname.map(({ firstName }) => firstName);
-let lastNames = FLname.map(({ lastName }) => lastName);
-console.log(firstNames, lastNames);
+FLname.forEach(({firstName, lastName}) => console.log(firstName, lastName));
+// let {firstName, lastName} = FLname;
+// let firstNames = FLname.map(({ firstName }) => firstName);
+// let lastNames = FLname.map(({ lastName }) => lastName);
+// console.log(firstName);
+// console.log(lastName);
+
