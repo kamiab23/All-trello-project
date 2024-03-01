@@ -1,12 +1,12 @@
 // swap
-let a = 1;
-let b = 2;
+let a = [1,5,4];
+let b = [22,3,6];
 
 [a, b] = [b, a];
 console.log(a, b);
 
 // add a value at the first of the array
-let newArray = [3, ...[a, b]];
+let newArray = [3, ...a,...b];
 console.log(newArray);
 
 // add a value at the end of the array
@@ -17,12 +17,6 @@ let FLname = [
   { firstName: "ali", lastName: "moradi" },
   { firstName: "reza", lastName: "soltani" }
 ];
-// let firstNames = FLname.map(({ firstName }) => firstName);
-// let lastNames = FLname.map(({ lastName }) => lastName);
-let firstNames = [];
-let lastNames = [];
-FLname.forEach(person => {
-  firstNames.push(person.firstName);
-  lastNames.push(person.lastName);
-})
+let firstNames = FLname.map(({ firstName }) => firstName);
+let lastNames = FLname.map(({ lastName }) => lastName);
 console.log(firstNames, lastNames);
